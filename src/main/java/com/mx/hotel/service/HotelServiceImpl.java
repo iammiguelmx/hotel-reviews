@@ -28,10 +28,6 @@ public class HotelServiceImpl implements HotelService{
         repository.save(hotel);
     }
 
-    @Override
-    public Hotel findById(String id) {
-        return repository.findById(id);
-    }
 
     @Override
     public List<Hotel> findByPricePerNightLessThan(int maxPrice) {

@@ -14,8 +14,7 @@ public class Review {
     @Getter @Setter
     private boolean approved;
 
-    protected Review() {
-    }
+    protected Review() { }
 
     public Review(String userName, int rating, boolean approved) {
         this.userName = userName;

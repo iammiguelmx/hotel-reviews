@@ -30,16 +30,9 @@ public class HotelController {
         hotelService.save(hotel);
     }
 
-    @GetMapping("/{id}")
-    public Hotel getById(@PathVariable("id") String id) {
-        Hotel hotel = this.hotelService.findById(id);
-        return hotel;
-    }
-
     @GetMapping("/price/{maxPrice}")
     public List<Hotel> getByPricePerNight(@PathVariable("maxPrice") int maxPrice) {
         List<Hotel> hotels = this.hotelService.findByPricePerNightLessThan(maxPrice);
-
         return hotels;
     }
 
