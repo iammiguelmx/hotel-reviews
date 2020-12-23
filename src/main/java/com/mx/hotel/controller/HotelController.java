@@ -1,5 +1,6 @@
 package com.mx.hotel.controller;
 
+import com.querydsl.core.types.dsl.BooleanExpression;
 import com.mx.hotel.service.HotelService;
 import com.mx.hotel.model.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,5 +42,6 @@ public class HotelController {
         List<Hotel> hotels = this.hotelService.findByCity(city);
         return hotels;
     }
+
 
 }
